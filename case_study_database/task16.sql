@@ -10,6 +10,7 @@ left join hop_dong hd on nv.ma_nhan_vien = hd.ma_nhan_vien
 where nv.ma_nhan_vien not in (
 select nv.ma_nhan_vien from nhan_vien nv
 right join hop_dong hd on nv.ma_nhan_vien = hd.ma_nhan_vien
+WHERE year(ngay_lam_hop_dong) BETWEEN 2020 and 2021
 group by ma_nhan_vien)
 ) temp);
 -- những Nhân viên đã được xoá

@@ -2,10 +2,10 @@
 -- chỉ cập nhật những khách hàng đã từng đặt phòng với Tổng Tiền thanh toán trong năm
 -- 2021 là lớn hơn 10.000.000 VNĐ.
 
-select
-kh.ma_khach_hang,
-kh.ho_va_ten,
-kh.ma_loai_khach
+SET SQL_SAFE_UPDATES = 0;
+UPDATE khach_hang kh SET kh.ma_loai_khach = 1
+WHERE  kh.ma_khach_hang in (
+select*from( SELECT  kh.ma_khach_hang
 from khach_hang kh
  join loai_khach lk on lk.ma_loai_khach=kh.ma_loai_khach
  join hop_dong hd on hd.ma_khach_hang= kh.ma_khach_hang
@@ -13,4 +13,4 @@ from khach_hang kh
  join hop_dong_chi_tiet hdct on hd.ma_hop_dong=hdct.ma_hop_dong
  join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem=dvdk.ma_dich_vu_di_kem
 WHERE (ifnull(dv.chi_phi_thue,0)+ ifnull(hdct.so_luong * dvdk.gia,0)>10000000)
- AND year(hd.ngay_lam_hop_dong) = 2021;
+ AND year(hd.ngay_lam_hop_dong) = 2021)temp);
