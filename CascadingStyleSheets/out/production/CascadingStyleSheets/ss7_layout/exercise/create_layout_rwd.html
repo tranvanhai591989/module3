@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+        .col-2 {
+            width: 16.66%;
+        }
+        .col-3 {
+            width: 25%;
+        }
+        .col-4 {
+            width: 33.33%;
+        }
+        .col-5 {
+            width: 41.66%;
+        }
+        .col-6 {
+            width: 50%;
+        }
+        .col-7 {
+            width: 58.33%;
+        }
+        .col-8 {
+            width: 66.66%;
+        }
+        .col-9 {
+            width: 75%;
+        }
+        .col-10 {
+            width: 83.33%;
+        }
+        .col-11 {
+            width: 91.66%;
+        }
+        .col-12 {
+            width: 100%;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+
+        .header {
+            width: 100%;
+            height: 40px;
+            background-color: #984eca;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left {
+            width: 20%;
+            height: 600px;
+            background-color: coral;
+            float: left;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+            background-color: cornflowerblue;
+
+            flex-direction: column;
+        }
+
+        .right {
+            width: 20%;
+            height: 600px;
+           background-color: #e9d8f4;
+            float: right;
+
+        }
+
+        .footer {
+            width: 100%;
+            height: 40px;
+            background-color: yellowgreen;
+            clear: both;
+            text-align: center;
+        }
+
+        .header {
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            background-color: cornflowerblue;
+            border: 1px solid #CDCDCD;
+        }
+
+        .header ul, .header li {
+            padding: 0;
+            margin: 0;
+        }
+
+        .header li {
+            position: relative;
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .header li a {
+            width: 100px;
+            height: 30px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            background-color: cornflowerblue;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .header ul ul li a {
+            width: 200px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .header li a:hover {
+            background-color: green;
+        }
+
+        .header ul ul {
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            visibility: hidden;
+        }
+
+        .header ul li:hover ul {
+            visibility: visible;
+        }
+        .header login{
+           display: flex;
+            justify-content: space-between;
+            align-content: flex-end;
+            text-align: left;
+        }
+        .than{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .noi_dung{
+            padding: 10px 10px 10px 10px;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .h1{
+            padding: 10px 10px;
+        }
+        .khoi  {
+            padding: 30px 30px 30px 30px;
+            margin: 30px 30px 30px 30px;
+            background-color: crimson;
+            text-align: center;
+        }
+
+    </style>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+<div class="row" >
+        <div class="header">
+            <ul>
+            <li><a href="#">Logo</a>
+                <ul>
+                    <li><a href="#">Computing Fundametal</a></li>
+                    <li><a href="#">C Programming</a></li>
+                    <li><a href="#">Building Dynamic Website</a></li>
+                    <li><a href="#">MS Transact-SQL</a></li>
+                    <li><a href="#">Project</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Home</a>
+                <ul>
+                    <li><a href="#">Cloud Computing</a></li>
+                    <li><a href="#">APJ - I</a></li>
+                    <li><a href="#">APJ - II</a></li>
+                    <li><a href="#">APJ - III</a></li>
+                    <li><a href="#">eProject</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a>
+                <ul>
+                    <li><a href="#">Cloud Computing</a></li>
+                    <li><a href="#">APJ - I</a></li>
+                    <li><a href="#">APJ - II</a></li>
+                    <li><a href="#">APJ - III</a></li>
+                    <li><a href="#">eProject</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Projects</a>
+                <ul>
+                    <li><a href="#">Cloud Computing</a></li>
+                    <li><a href="#">APJ - I</a></li>
+                    <li><a href="#">APJ - II</a></li>
+                    <li><a href="#">APJ - III</a></li>
+                    <li><a href="#">eProject</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a>
+                <ul>
+                    <li><a href="#">Cloud Computing</a></li>
+                    <li><a href="#">APJ - I</a></li>
+                    <li><a href="#">APJ - II</a></li>
+                    <li><a href="#">APJ - III</a></li>
+                    <li><a href="#">eProject</a></li>
+                </ul>
+            </li>
+
+        </ul>
+            <div>
+        <li><a class="login" href=""><ion-icon name="log-in-outline"></ion-icon> Login </a></li>
+            </div>
+    </div>
+</div>
+<div class="than">
+    <div class="left">
+
+    </div>
+    <div class="content">
+        <h1 class="h1">Welcome</h1>
+        <p class="noi_dung">Lorem ipsum dolor sit ametascdsadljk drgkjlagihsa dkfh salfjiashdf ljasdhflk jasdfb
+            lasd fjkbhasldkfj basldfj hbas fl iasb flia sflisad fsailf ualisu adfhlj aisgfli, consectetur adipiscing</p>
+        <h3>Test</h3>
+        <p>lkjfslkf ksdjfhljkadshf</p>
+
+    </div>
+    <div class="right">Right
+        <div class="khoi"><p>ASD</p></div>
+        <div class="khoi"><p>ASD</p></div>
+
+    </div>
+    <div class="footer">Footer</div>
+
+</div>
+</body>
+</html>
