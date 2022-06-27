@@ -1,2 +1,3 @@
 rootProject.name = 'module3_account_name_wbe'
+include 'practice'
 
