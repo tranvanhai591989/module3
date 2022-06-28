@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/discount_price" method="post">
+<form>
     <table >
         <tr style="border: 1px solid black">
             <th>

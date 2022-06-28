@@ -13,11 +13,12 @@
   <body>
   <form action="/discount_price" method="post">
     <h1> Product Discount Calculator</h1>
-    <input type="text" name="description" placeholder="Mô tả sản phẩm">
-    <input type="text" name="price" placeholder="Product price">
-    <input type="text" name="discount" placeholder="% discount">
+    <input type="text" name="description1" placeholder="Mô tả sản phẩm">
+    <input type="text" name="price1" placeholder="Product price">
+    <input type="text" name="discount1" placeholder="% discount">
     <button type="submit">Enter </button>
 
   </form>
+
   </body>
 </html>
