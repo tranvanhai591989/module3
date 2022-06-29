@@ -35,14 +35,14 @@
                 <td><a href="/product?action=view&id=${product.getId()}">${product.name}</a></td>
                 <td>${product.price}</td>
                 <td>${product.producer}</td>
-                <td><a href="/product?action=edit&id=${product.getId()}">edit</a></td>
-                <td><a href="/product?action=delete&id=${product.getId()}">delete</a></td>
+                <td><a href="/product?action=edit&id=${product.getId()}">Edit</a></td>
+                <td><a href="/product?action=delete&id=${product.getId()}">Delete</a></td>
             </tr>
         </c:forEach>
     </table>
 
 </form>
-<a href="/student?action=create">Thêm mới Product</a>
+<a href="/student?action=create">Add new Product</a>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

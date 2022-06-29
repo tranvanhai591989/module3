@@ -11,9 +11,9 @@
     <title>View Product</title>
 </head>
 <body>
-<h1>Customer details</h1>
+<h1>Product details</h1>
 <p>
-    <a href="/product">Back to customer list</a>
+    <a href="/product">Back to product list</a>
 </p>
 <table>
     <tr>

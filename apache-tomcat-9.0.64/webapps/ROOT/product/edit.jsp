@@ -13,11 +13,11 @@
 </head>
 <body>
 <p>
-    <a href="/product">Back to customer list</a>
+    <a href="/product">Back to Product list</a>
 </p>
 <form method="post">
     <fieldset>
-        <legend>Customer information</legend>
+        <legend>Product information</legend>
         <table>
 
             <tr>
@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" value="Update customer"></td>
+                <td><input type="submit" value="Update producer"></td>
             </tr>
         </table>
     </fieldset>
