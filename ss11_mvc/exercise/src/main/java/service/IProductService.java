@@ -10,13 +10,13 @@ public interface IProductService {
 
     void create( Product product);
 
-    void edit( int id, Product product);
+    void edit( Product product);
 
     void delete( int id);
-
-    void seeDetails();
 
     Product findById(int id);
 
     List<Product> findByName(String name);
+
+    List<Product> sortByName();
 }

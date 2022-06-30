@@ -42,6 +42,8 @@ public class ProductServlet extends HttpServlet {
             case "view":
                 viewProduct(request, response);
                 break;
+            case "sort":
+                viewSortByName(request,response);
             default:
                 findAll(request, response);
                 break;
@@ -67,15 +69,38 @@ public class ProductServlet extends HttpServlet {
             case "edit":
                 editProduct(request, response);
                 break;
+            case "sort":
+                sortByName(request,response);
             default:
                 findAll(request, response);
                 break;
         }
     }
 
+    private void sortByName(HttpServletRequest request, HttpServletResponse response) {
+    }
+
+    private void viewSortByName(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        Product product = this.productService.sortByName(name);
+        request.setAttribute("product",product);
+        RequestDispatcher dispatcher;
+        if (product == null) {
+            dispatcher = request.getRequestDispatcher("product/error-404.jsp");
+        } else {
+            request.setAttribute("product", product);
+            dispatcher = request.getRequestDispatcher("product/edit.jsp");
+        }
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void findAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         productList = productService.findAll();
-        request.setAttribute("product/productList", productList);
+        request.setAttribute("productList", productList);
         request.getRequestDispatcher("product/productList.jsp").forward(request, response);
     }
 
@@ -91,7 +116,6 @@ public class ProductServlet extends HttpServlet {
         String name = request.getParameter("name");
         float price = Float.parseFloat(request.getParameter("price"));
         String producer = request.getParameter("producer");
-
         Product product = new Product(id, name, price, producer);
         productService.create(product);
         response.sendRedirect("/product");
@@ -141,6 +165,7 @@ public class ProductServlet extends HttpServlet {
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Product product = this.productService.findById(id);
+        request.setAttribute("product",product);
         RequestDispatcher dispatcher;
         if (product == null) {
             dispatcher = request.getRequestDispatcher("product/error-404.jsp");
@@ -169,9 +194,9 @@ public class ProductServlet extends HttpServlet {
             product.setName(name);
             product.setPrice(price);
             product.setProducer(producer);
-            this.productService.edit(id, product);
+            this.productService.edit( product);
             request.setAttribute("product", product);
-            request.setAttribute("message", "Customer information was updated");
+            request.setAttribute("message", "Product information was updated");
             dispatcher = request.getRequestDispatcher("product/edit.jsp");
         }
         try {

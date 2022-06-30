@@ -21,18 +21,13 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public void edit(int id, Product product) {
-        productRepository.edit(id, product);
+    public void edit(Product product) {
+        productRepository.edit(product);
     }
 
     @Override
     public void delete(int id) {
         productRepository.delete(id);
-    }
-
-    @Override
-    public void seeDetails() {
-
     }
 
     @Override
@@ -43,5 +38,10 @@ public class ProductServiceImpl implements IProductService {
     @Override
     public List<Product> findByName(String name) {
         return productRepository.findByName(name);
+    }
+
+    @Override
+    public List<Product> sortByName() {
+        return null;
     }
 }

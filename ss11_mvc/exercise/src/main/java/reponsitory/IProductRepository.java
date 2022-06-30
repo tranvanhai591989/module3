@@ -10,13 +10,11 @@ public interface IProductRepository {
 
     void create(Product product);
 
-    void edit(int id, Product product);
-
     void delete(int id);
-
-    void seeDetails();
 
     Product findById(int id);
 
     List<Product> findByName(String name);
+
+    void edit(Product product);
 }

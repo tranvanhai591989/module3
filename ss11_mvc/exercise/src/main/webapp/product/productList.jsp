@@ -18,8 +18,9 @@
 <form action="/product">
     <input type="text" name="nameSearch">
     <input type="submit" name="action" value="search">
-</form>
-<form action="/product" >
+    <br>
+    <input type="submit" name="action" value="Sort by name ">
+
     <table class="table">
         <tr>
             <th>ID</th>
@@ -42,7 +43,7 @@
     </table>
 
 </form>
-<a href="/student?action=create">Add new Product</a>
+<a href="/product?action=create">Add new Product</a>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

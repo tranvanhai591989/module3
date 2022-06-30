@@ -9,6 +9,12 @@ public class Product {
     public Product() {
     }
 
+    public Product(String name, float price, String producer) {
+        this.name = name;
+        this.price = price;
+        this.producer = producer;
+    }
+
     public Product(int id, String name, float price, String producer) {
         this.id = id;
         this.name = name;
